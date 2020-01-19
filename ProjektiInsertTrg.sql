@@ -1,4 +1,4 @@
-alter TRIGGER [dbo].[TR_ProjektiLisays]
+create TRIGGER [dbo].[TR_ProjektiLisays]
 ON [dbo].[Projektit]
 FOR INSERT 
 AS
