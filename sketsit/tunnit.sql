@@ -12,7 +12,14 @@ DECLARE @from datetime, @till datetime, @hlo int, @proj int
 
 set @hlo = 1005
 set @proj = 1002
-set @from = '2020-01-07'
-set @till = '2020-01-10'
-exec [dbo].[uspLisaaTunnit] @date_from = @from, @date_till = @till, @henkilo = @hlo, @Projekti = @proj
+set @from = '2019-09-02'
+set @till = '2019-09-06'
+--exec [dbo].[uspLisaaTunnit] @date_from = @from, @date_till = @till, @henkilo = @hlo, @Projekti = @proj
+exec [dbo].[uspLoopHarjoitus] @from_IN = @from, @till_IN = @till
+
+select * from tunnit where pvm between '2019-09-02' and '2019-09-07'
+--select * from Projektit
+
+
+
 
